@@ -7,7 +7,7 @@
 ---
 
 ## Live Deployment
-* **Live Website:** [Paste your Vercel link here]
+* **Live Website:** https://week1-assignments-nine.vercel.app
 
 ---
 
