@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prachi Singh | Week 1 Web Development</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f4f5f7;
+            color: #22252a;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 3rem 6%;
+        }
+        .header {
+            max-width: 960px;
+            margin: 0 auto 2.25rem auto;
+            width: 100%;
+        }
+        .tag {
+            display: inline-block;
+            background-color: #edf0f7;
+            color: #3b5998;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0.3rem 0.75rem;
+            border-radius: 4px;
+            margin-bottom: 0.75rem;
+            letter-spacing: 0.4px;
+        }
+        h1 { font-size: 2.1rem; margin-bottom: 0.45rem; color: #22252a; }
+        .subtitle { color: #5a6069; font-size: 1rem; }
+        .cards-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 1.4rem;
+            max-width: 960px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        .task-card {
+            background: #ffffff;
+            border: 1px solid #dcdde1;
+            border-radius: 8px;
+            padding: 1.85rem;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+        .task-card:hover {
+            transform: translateY(-3px);
+            border-color: #3b5998;
+        }
+        .num { font-size: 0.8rem; font-weight: 700; color: #3b5998; margin-bottom: 0.45rem; }
+        .task-card h2 { font-size: 1.25rem; margin-bottom: 0.55rem; color: #22252a; }
+        .task-card p { color: #5a6069; font-size: 0.94rem; line-height: 1.5; margin-bottom: 1.4rem; }
+        .go-link { font-weight: 600; color: #3b5998; font-size: 0.92rem; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <span class="tag">WeIntern • Week 1 Submissions</span>
+        <h1>Prachi Singh — Frontend Tasks</h1>
+        <p class="subtitle">Select a module below to view the completed project.</p>
+    </div>
+
+    <div class="cards-row">
+        <a href="./Portfolio-website/index.html" class="task-card">
+            <div>
+                <div class="num">TASK 01</div>
+                <h2>Personal Portfolio</h2>
+                <p>A 4-page responsive portfolio featuring Home, About, Projects, and Contact pages.</p>
+            </div>
+            <span class="go-link">Open Portfolio &rarr;</span>
+        </a>
+
+        <a href="./Business-landing page/index.html" class="task-card">
+            <div>
+                <div class="num">TASK 02</div>
+                <h2>Restaurant Landing Page</h2>
+                <p>A responsive single-page layout for The Savory Bistro with menu highlights and booking.</p>
+            </div>
+            <span class="go-link">Open Landing Page &rarr;</span>
+        </a>
+
+        <a href="./CSS-Challenge/index.html" class="task-card">
+            <div>
+                <div class="num">TASK 03</div>
+                <h2>CSS Layout & Animation</h2>
+                <p>Responsive Flexbox cards, CSS Grid matrix layouts, and smooth hover/loader animations.</p>
+            </div>
+            <span class="go-link">Open CSS Challenge &rarr;</span>
+        </a>
+    </div>
+</body>
+</html>

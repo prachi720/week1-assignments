@@ -1,0 +1,396 @@
+/* --- Global Reset & Muted Palette --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --page-bg: #f4f5f7;
+    --card-bg: #ffffff;
+    --border-color: #dcdde1;
+    --accent: #3b5998;
+    --accent-hover: #2d4373;
+    --accent-tint: #edf0f7;
+    --text-dark: #22252a;
+    --text-gray: #5a6069;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--page-bg);
+    color: var(--text-dark);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- Navigation --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 8%;
+    background-color: var(--card-bg);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.brand {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-decoration: none;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 1.75rem;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: var(--text-gray);
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding-bottom: 0.25rem;
+    transition: color 0.2s;
+}
+
+.nav-list a:hover,
+.nav-list a.active {
+    color: var(--accent);
+    border-bottom: 2px solid var(--accent);
+}
+
+/* --- Main Layout Container --- */
+.main-wrap {
+    flex: 1;
+    max-width: 1040px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 3.5rem 6%;
+}
+
+/* --- Buttons --- */
+.btn {
+    display: inline-block;
+    padding: 0.7rem 1.4rem;
+    border-radius: 5px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.92rem;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.primary-btn {
+    background-color: var(--accent);
+    color: #ffffff;
+}
+
+.primary-btn:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-1px);
+}
+
+.secondary-btn {
+    background-color: var(--card-bg);
+    color: var(--text-dark);
+    border: 1px solid var(--border-color);
+}
+
+.secondary-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.small-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    align-self: flex-start;
+}
+
+.full-btn {
+    width: 100%;
+}
+
+/* --- Home Intro --- */
+.intro-box {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 3rem;
+    margin-bottom: 3rem;
+}
+
+.role-label {
+    display: inline-block;
+    background-color: var(--accent-tint);
+    color: var(--accent);
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.intro-box h1 {
+    font-size: 2.25rem;
+    line-height: 1.25;
+    margin-bottom: 1rem;
+    max-width: 720px;
+}
+
+.intro-box p {
+    color: var(--text-gray);
+    font-size: 1.05rem;
+    max-width: 620px;
+    margin-bottom: 1.75rem;
+}
+
+.action-row {
+    display: flex;
+    gap: 1rem;
+}
+
+/* --- Inner Page Banner --- */
+.page-banner {
+    margin-bottom: 2.5rem;
+}
+
+.page-banner h1 {
+    font-size: 2rem;
+    margin-bottom: 0.4rem;
+}
+
+.page-banner p {
+    color: var(--text-gray);
+    font-size: 1rem;
+}
+
+/* --- Sections & Cards --- */
+.content-section {
+    margin-bottom: 2.75rem;
+}
+
+.section-heading {
+    font-size: 1.45rem;
+    margin-bottom: 1.25rem;
+    color: var(--text-dark);
+}
+
+.grid-three {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 1.25rem;
+}
+
+.stack-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+}
+
+.info-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.info-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.45rem;
+    color: var(--text-dark);
+}
+
+.info-card p {
+    color: var(--text-gray);
+    font-size: 0.94rem;
+}
+
+/* --- About Specifics --- */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.period {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent);
+}
+
+.subtitle-text {
+    font-weight: 600;
+    color: var(--text-dark) !important;
+    margin-bottom: 0.45rem;
+}
+
+/* --- Projects Specifics --- */
+.project-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tag-label {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 0.35rem;
+}
+
+.tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin: 1rem 0 1.25rem 0;
+}
+
+.tag-row span {
+    background-color: var(--page-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-dark);
+    padding: 0.2rem 0.55rem;
+    border-radius: 4px;
+    font-size: 0.78rem;
+    font-weight: 500;
+}
+
+/* --- Contact Specifics --- */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2rem;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2rem;
+}
+
+.contact-details h3 {
+    margin-bottom: 0.9rem;
+    font-size: 1.2rem;
+}
+
+.contact-details p {
+    margin-bottom: 0.75rem;
+    color: var(--text-gray);
+    font-size: 0.94rem;
+}
+
+.contact-details a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+.input-group {
+    margin-bottom: 1rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 0.65rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--page-bg);
+    font-family: inherit;
+    font-size: 0.94rem;
+    color: var(--text-dark);
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    outline: 2px solid var(--accent);
+    background-color: var(--card-bg);
+    border-color: transparent;
+}
+
+/* --- Footer --- */
+.site-footer {
+    background-color: var(--card-bg);
+    border-top: 1px solid var(--border-color);
+    padding: 1.4rem 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-gray);
+    font-size: 0.88rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.footer-links a {
+    color: var(--text-gray);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer-links a:hover {
+    color: var(--accent);
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 0.9rem;
+        padding: 1rem 5%;
+    }
+
+    .nav-list {
+        gap: 1.2rem;
+    }
+
+    .intro-box {
+        padding: 1.75rem;
+    }
+
+    .intro-box h1 {
+        font-size: 1.75rem;
+    }
+
+    .action-row {
+        flex-direction: column;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        padding: 1.5rem;
+    }
+
+    .site-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}

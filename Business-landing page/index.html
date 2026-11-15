@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Savory Bistro | Fine Dining</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="logo">SavoryBistro</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Specialties</a></li>
+                <li><a href="#contact">Reservations</a></li>
+            </ul>
+        </nav>
+        <a href="#contact" class="btn btn-primary nav-cta">Book a Table</a>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Culinary Excellence in Every Bite</h1>
+                <p>Locally sourced ingredients, passionate chefs, and an unforgettable dining atmosphere crafted for food lovers.</p>
+                <div class="hero-buttons">
+                    <a href="#services" class="btn btn-primary">Explore Menu</a>
+                    <a href="#contact" class="btn btn-outline">Reserve Now</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="hero.jpg" alt="Elegant restaurant dining room">
+            </div>
+        </section>
+
+        <!-- Services / Culinary Highlights Section -->
+        <section id="services" class="services">
+            <h2 class="section-title">Our Signature Offerings</h2>
+            <div class="services-grid">
+                <article class="service-card">
+                    <div class="icon">🍽️</div>
+                    <h3>Artisanal Mains</h3>
+                    <p>Seasonal entrees prepared fresh daily using organic, farm-to-table produce and prime cuts.</p>
+                </article>
+                <article class="service-card">
+                    <div class="icon">🍷</div>
+                    <h3>Curated Wine Cellar</h3>
+                    <p>Hand-selected international vintages paired specifically to elevate every course on our menu.</p>
+                </article>
+                <article class="service-card">
+                    <div class="icon">🍰</div>
+                    <h3>House-Made Pastries</h3>
+                    <p>Decadent desserts and baked goods crafted from scratch every morning by our pastry team.</p>
+                </article>
+                <article class="service-card">
+                    <div class="icon">🎉</div>
+                    <h3>Private Dining</h3>
+                    <p>Bespoke tasting menus and intimate event spaces tailored for celebrations and corporate gatherings.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Contact & Reservation Form Section -->
+        <section id="contact" class="contact">
+            <div class="contact-box">
+                <h2>Reserve Your Table</h2>
+                <p>Fill out the details below and our host team will confirm your booking shortly.</p>
+                <form class="reservation-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="guests">Party Size & Date</label>
+                        <input type="text" id="guests" name="guests" placeholder="e.g., 4 Guests - Nov 20 at 8:00 PM" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="notes">Special Requests</label>
+                        <textarea id="notes" name="notes" rows="3" placeholder="Allergies, seating preferences, or occasions..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Confirm Reservation</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 The Savory Bistro. All rights reserved.</p>
+        <p>124 Culinary Avenue • Open Daily 11:00 AM – 11:00 PM</p>
+    </footer>
+
+</body>
+</html>
